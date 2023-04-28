@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import css from './Filter.module.css';
 
-export class Filter extends Component {
-  handlerInputFilter = e => {
-    this.props.handlerFilter(e.target.value);
+export const Filter = ({ handlerFilter }) => {
+  const handlerInputFilter = e => {
+    handlerFilter(e.target.value);
   };
 
-  render() {
-    return (
-      <label className={css.filter}>
-        <input
-          placeholder="filter"
-          type="text"
-          name="filter"
-          onChange={this.handlerInputFilter}
-        ></input>
-      </label>
-    );
-  }
-}
+  return (
+    <label className={css.filter}>
+      <input
+        placeholder="filter"
+        type="text"
+        name="filter"
+        onChange={handlerInputFilter}
+      ></input>
+    </label>
+  );
+};
+
+Filter.propTypes = {
+  handlerFilter: PropTypes.func.isRequired,
+};
