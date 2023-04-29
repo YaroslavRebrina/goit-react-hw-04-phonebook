@@ -16,6 +16,8 @@ export const ContactsForm = ({ handlerSubmit }) => {
       case 'number':
         setNumber(e.target.value);
         break;
+      default:
+        break;
     }
   };
 

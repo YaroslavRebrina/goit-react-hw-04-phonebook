@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ContactsForm } from './ContactsWidget/ContactsForm';
 import { Filter } from './ContactsWidget/Filter';
 import { ContactItem } from './ContactsWidget/ContactItem';
